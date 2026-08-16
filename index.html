@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Academic homepage of Arooj Fatima.">
+    <title>Arooj Fatima</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <header class="site_header">
+            <div class="identity">
+                <a class="site_name" href="index.html">Arooj Fatima</a>
+            </div>
+
+            <nav aria-label="Main navigation">
+                <a class="current" href="index.html">Profile</a>
+                <a href="news.html">Log</a>
+                <a href="personal.html">Personal</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="opening">
+                <div>
+                    <h1>Brief</h1>
+
+                    <p>
+                        I am a rising final-year undergraduate at
+                        <a href="https://nust.edu.pk/">NUST</a>, where I study bioinformatics.
+                        I am mostly interested in the formal verification of systems software
+                        and programming languages. Most of my proof work is in Rocq.
+                    </p>
+
+                    <p>
+                        Alongside my degree, I am a Formal Verification Engineer Intern at
+                        <a href="https://formal.land/">Formal Land</a>. I am also completing my
+                        final-year project under
+                        <a href="https://scholar.google.com/citations?user=fmgsqYkAAAAJ&hl=en">Dr. Adnan Rashid</a>.
+                    </p>
+                </div>
+
+                <div class="profile_picture">
+                    <figure class="opening_picture">
+                        <img src="assets/rock-lake.webp" alt="A mountain lake beneath a clear blue sky">
+                    </figure>
+
+                    <div class="contact_links" aria-label="Contact and profiles">
+                        <a href="mailto:afatima.bsbi23sines@student.nust.edu.pk">Email</a>
+                        <a href="https://github.com/cascade77">GitHub</a>
+                        <a href="https://codeberg.org/cascade">Codeberg</a>
+                        <!-- Replace the LinkedIn URL below. -->
+                        <a href="https://www.linkedin.com/in/arooj-dot-exe/">LinkedIn</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="work_opening" id="work">
+                <figure>
+                    <img src="assets/work-sunset.jpg" alt="A blue evening sky above a distant line of trees">
+                </figure>
+
+                <div>
+                    <h1>Work</h1>
+                </div>
+            </section>
+
+            <div class="project_list">
+                <article class="project" id="formal-land">
+                    <header class="project_header">
+                        <h2>Formal Verification Engineer Intern · Formal Land</h2>
+                        <span>June 2026–present</span>
+                    </header>
+                    <p>
+                        I contribute to the public rocq-of-rust project and work in Formal Land's
+                        private go-ethereum verification repository.
+                    </p>
+                    <ul class="work_points">
+                        <li>
+                            I maintain Rust-to-Rocq translations as upstream crates such as REVM
+                            change, and developed evaluation methods using OCaml extraction and
+                            runtime function resolution.
+                        </li>
+                        <li>
+                            I write instruction-level correspondence proofs between REVM and Geth,
+                            covering stack, memory, storage, host state, errors, and interpreter
+                            steps.
+                        </li>
+                    </ul>
+                    <p class="project_links">
+                        <a href="https://github.com/formal-land/coq-of-rust">rocq-of-rust repository →</a>
+                        <a href="https://formal.land/blog/2026/07/14/revm-v102-upgrade">upgrade note →</a>
+                    </p>
+                </article>
+
+                <article class="project" id="university-research">
+                    <header class="project_header">
+                        <h2>Formal verification and theorem proving research</h2>
+                        <span>June 2025–present</span>
+                    </header>
+                    <p>
+                        At SINES / SEECS, NUST, I work under
+                        <a href="https://scholar.google.com/citations?user=fmgsqYkAAAAJ&hl=en">Dr. Adnan Rashid</a>'s
+                        supervision. My final-year project is the verification of parts of the
+                        µC/OS-III kernel.
+                    </p>
+                    <ul class="work_points">
+                        <li>
+                            <strong>µC/OS-III final-year project.</strong> We verified four C
+                            functions operating on the configured 32-bit ready-priority bitmap.
+                            The proofs use Rocq and VST over CompCert's C semantics.
+                        </li>
+                        <li>
+                            <strong>CPU scheduling study.</strong> While preparing for the FYP, my
+                            teammate, supervisor, and I formalized six general-purpose scheduling
+                            policies in a common Rocq framework. The manuscript is under blind
+                            review at a local conference.
+                        </li>
+                    </ul>
+                    <p class="project_links">
+                        <a href="https://codeberg.org/cascade/ucos3-vst">repository →</a>
+                        <a href="https://fmcad.org/FMCAD26/student_forum/">FMCAD Student Forum →</a>
+                        <span class="pending_link">Scheduling repository is private</span>
+                    </p>
+                </article>
+
+                <article class="project" id="dl-internship">
+                    <header class="project_header">
+                        <h2>Summer Research Intern · DL Laboratory, NCAI</h2>
+                        <span>June–August 2025</span>
+                    </header>
+                    <p>
+                        At SEECS, NUST, I trained decision trees, neural networks, ResNet50, and
+                        YOLO on CIFAR and custom datasets. I also reproduced active-learning work
+                        on medical images and compared selection methods with TF-IDF and
+                        Sentence-BERT embeddings. In those experiments, data representation
+                        affected the results more than the choice of selection algorithm.
+                    </p>
+                    <p class="project_links">
+                        <a href="https://github.com/cascade77/ncai-dll-internship-summer25">repository →</a>
+                    </p>
+                </article>
+
+                <article class="project" id="rocq-contributions">
+                    <header class="project_header">
+                        <h2>Open-source Rocq contributions</h2>
+                        <span>July 2026–present</span>
+                    </header>
+                    <p>
+                        I authored six merged pull requests across coqutil and Parseque. The work
+                        documents the coqutil build process, adds lemmas for <code>Forall2</code>
+                        and option operations, and tests multiline parser source positions.
+                    </p>
+                    <p class="project_links">
+                        <a href="https://github.com/mit-plv/coqutil/pulls?q=is%3Apr+author%3Acascade77">coqutil contributions →</a>
+                        <a href="https://github.com/rocq-community/parseque/pulls?q=is%3Apr+author%3Acascade77">Parseque contribution →</a>
+                    </p>
+                </article>
+
+                <article class="project" id="algorithms">
+                    <header class="project_header">
+                        <h2>Algorithms and data structures</h2>
+                        <span>June 2025–present</span>
+                    </header>
+                    <p>
+                        Rocq and Lean formalizations of BSTs, red-black trees, sorting algorithms,
+                        MPI block decomposition, process transitions, and scheduler models. All
+                        published proofs type-check without admitted results.
+                    </p>
+                    <p class="project_links">
+                        <a href="https://github.com/cascade77/formal-verification-algorithms">repository →</a>
+                    </p>
+                </article>
+
+                <article class="project" id="software-foundations">
+                    <header class="project_header">
+                        <h2>Software Foundations</h2>
+                        <span>December 2025–present</span>
+                    </header>
+                    <p>
+                        I am working through the Software Foundations exercises in Rocq. The
+                        repository remains private because the book asks readers not to publish
+                        solutions.
+                    </p>
+                </article>
+
+                <article class="project" id="protein-network">
+                    <header class="project_header">
+                        <h2>Proof-star convergence</h2>
+                        <span>February–May 2026</span>
+                    </header>
+                    <p>
+                        I built a PySpark pipeline for the STRING human protein-interaction network
+                        and verified the Large Star / Small Star connected-components algorithm in
+                        Rocq at fixpoint.
+                    </p>
+                    <p class="project_links">
+                        <a href="https://github.com/cascade77/proof-star-convergence">repository →</a>
+                    </p>
+                </article>
+
+                <article class="project" id="freertos-server">
+                    <header class="project_header">
+                        <h2>Concurrent web-server simulation</h2>
+                        <span>September–December 2025</span>
+                    </header>
+                    <p>
+                        A FreeRTOS web-server simulation using tasks, queues, priorities, and a
+                        mutex for concurrent HTTP request processing.
+                    </p>
+                    <p class="project_links">
+                        <a href="https://github.com/cascade77/concurrent-webserver-rtos">FreeRTOS repository →</a>
+                    </p>
+                </article>
+
+                <article class="project" id="parallel-analysis">
+                    <header class="project_header">
+                        <h2>Parallel algorithm performance analysis</h2>
+                        <span>November 2025</span>
+                    </header>
+                    <p>
+                        Matrix multiplication and merge sort implemented with OpenMP, Pthreads,
+                        and MPI, with benchmarks comparing overhead and speed across the three
+                        programming models.
+                    </p>
+                    <p class="project_links">
+                        <a href="https://github.com/cascade77/parallel-matrix-sorting">parallel programs →</a>
+                    </p>
+                </article>
+            </div>
+        </main>
+
+        <footer>
+            <p>Last updated August 2026.</p>
+        </footer>
+    </div>
+</body>
+</html>

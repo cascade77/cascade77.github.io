@@ -1,0 +1,845 @@
+:root
+{
+    color-scheme: light;
+    --ground: #477f99;
+    --paper: rgba(239, 244, 241, 0.74);
+    --ink: #283332;
+    --heading: #274752;
+    --link: #315f70;
+    --link_hover: #183e4d;
+    --line: #aebdba;
+    --soft: #dce4e0;
+    --quiet: #687572;
+}
+
+*
+{
+    box-sizing: border-box;
+}
+
+html
+{
+    min-height: 100%;
+    background-color: var(--ground);
+    background-image: url("assets/paper-lake-waves.webp");
+    background-repeat: repeat;
+}
+
+body
+{
+    min-height: 100vh;
+    margin: 0;
+    color: var(--ink);
+    background: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13.5px;
+    line-height: 1.5;
+}
+
+.page
+{
+    width: min(810px, calc(100% - 42px));
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 31px 42px 22px;
+    background: var(--paper);
+    border-right: 1px solid rgba(71, 91, 88, 0.34);
+    border-left: 1px solid rgba(71, 91, 88, 0.34);
+}
+
+.site_header
+{
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 28px;
+    padding-bottom: 19px;
+    border-bottom: 1px solid var(--line);
+}
+
+.site_name
+{
+    display: inline-block;
+    margin-bottom: 5px;
+    color: var(--heading);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.55rem;
+    line-height: 1.1;
+    text-decoration: none;
+}
+
+.identity p
+{
+    margin: 2px 0 0;
+    color: var(--quiet);
+    font-size: 0.82rem;
+    line-height: 1.35;
+}
+
+.identity p a
+{
+    text-decoration: none;
+}
+
+nav
+{
+    align-self: end;
+    padding: 7px 10px;
+    background: var(--soft);
+    border: 1px solid var(--line);
+    font-size: 0.78rem;
+    white-space: nowrap;
+}
+
+nav a
+{
+    color: var(--link);
+    text-decoration: none;
+}
+
+nav a + a::before
+{
+    padding: 0 7px;
+    color: var(--quiet);
+    content: "·";
+}
+
+nav a.current
+{
+    color: var(--heading);
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a:focus
+{
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+main
+{
+    max-width: 620px;
+    padding: 27px 0 34px;
+}
+
+section + section
+{
+    margin-top: 31px;
+}
+
+.opening
+{
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 170px;
+    gap: 29px;
+}
+
+.profile_picture
+{
+    align-self: start;
+}
+
+.opening_picture
+{
+    align-self: start;
+    margin: 2px 0 0;
+    border: 1px solid var(--line);
+}
+
+.opening_picture img
+{
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+h1,
+h2,
+h3
+{
+    color: var(--heading);
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: normal;
+}
+
+h1
+{
+    margin: 0 0 13px;
+    font-size: 1.25rem;
+}
+
+h2
+{
+    margin: 0 0 10px;
+    font-size: 1.03rem;
+}
+
+h3
+{
+    margin: 18px 0 3px;
+    font-size: 1rem;
+}
+
+p
+{
+    max-width: 62ch;
+    margin: 0 0 12px;
+}
+
+a
+{
+    color: var(--link);
+}
+
+a:hover,
+a:focus
+{
+    color: var(--link_hover);
+}
+
+main a
+{
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+.contact_links
+{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 3px 10px;
+    margin: 8px 0 0;
+    font-size: 0.72rem;
+}
+
+.contact_links a
+{
+    white-space: nowrap;
+}
+
+.arrow_list,
+.star_list
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.arrow_list li
+{
+    display: grid;
+    grid-template-columns: 18px minmax(0, 1fr);
+    gap: 5px;
+    margin-bottom: 8px;
+}
+
+.arrow_list li > span,
+.star_list li > span
+{
+    color: #607f75;
+}
+
+.arrow_list p
+{
+    margin: 0;
+}
+
+.page_links
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 13px;
+}
+
+.page_links a
+{
+    display: grid;
+    grid-template-columns: 58px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    column-gap: 10px;
+    min-height: 61px;
+    padding: 6px;
+    background: rgba(220, 228, 224, 0.68);
+    border: 1px solid var(--line);
+    text-decoration: none;
+}
+
+.page_links img
+{
+    grid-row: 1 / 3;
+    width: 58px;
+    height: 47px;
+    object-fit: cover;
+}
+
+.page_links span
+{
+    align-self: end;
+    line-height: 1.15;
+}
+
+.page_links small
+{
+    align-self: start;
+    margin-top: 3px;
+    color: var(--quiet);
+    font-size: 0.72rem;
+    line-height: 1.15;
+}
+
+.news_list
+{
+    margin: 0;
+}
+
+.log_picture
+{
+    float: right;
+    width: 172px;
+    margin: 0 0 16px 24px;
+    border: 1px solid var(--line);
+}
+
+.log_picture img
+{
+    display: block;
+    width: 100%;
+    height: 105px;
+    object-fit: cover;
+}
+
+.news_list div
+{
+    display: grid;
+    grid-template-columns: 82px minmax(0, 1fr);
+    gap: 19px;
+    padding: 11px 0;
+    border-top: 1px solid var(--line);
+}
+
+.news_list dt
+{
+    color: var(--heading);
+    font-size: 0.82rem;
+    font-weight: bold;
+}
+
+.news_list dd
+{
+    margin: 0;
+}
+
+.event_mark
+{
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 5px;
+    border: 1px solid var(--line);
+    vertical-align: middle;
+}
+
+.event_mark img
+{
+    display: block;
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.event_mark.fmcad_mark
+{
+    background: #315262;
+}
+
+.event_mark.fmcad_mark img
+{
+    width: 39px;
+}
+
+.quiet
+{
+    color: var(--quiet);
+    font-style: italic;
+}
+
+.article_header
+{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--line);
+}
+
+.article_header p
+{
+    color: var(--quiet);
+    font-size: 0.78rem;
+}
+
+.journey_picture
+{
+    float: right;
+    width: 215px;
+    margin: 3px 0 17px 25px;
+    border: 1px solid var(--line);
+}
+
+.journey_picture img
+{
+    display: block;
+    width: 100%;
+    height: 135px;
+    object-fit: cover;
+    object-position: center 58%;
+}
+
+.video_picture
+{
+    float: right;
+    clear: right;
+    width: 215px;
+    margin: 0 0 17px 25px;
+    padding: 5px;
+    background: var(--soft);
+    border: 1px solid var(--line);
+    text-align: center;
+}
+
+.video_picture img
+{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.video_picture figcaption
+{
+    margin-top: 5px;
+    color: var(--quiet);
+    font-size: 0.68rem;
+    line-height: 1.25;
+}
+
+.notes_picture
+{
+    float: right;
+    clear: right;
+    width: 175px;
+    margin: 0 0 17px 25px;
+    padding: 5px;
+    background: var(--soft);
+    border: 1px solid var(--line);
+    text-align: center;
+}
+
+.notes_picture img
+{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.notes_picture figcaption
+{
+    margin-top: 5px;
+    color: var(--quiet);
+    font-size: 0.68rem;
+    line-height: 1.25;
+}
+
+.book_picture
+{
+    float: left;
+    width: 112px;
+    margin: 4px 21px 13px 0;
+    padding: 5px;
+    background: var(--soft);
+    border: 1px solid var(--line);
+    text-align: center;
+}
+
+.book_picture img
+{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.book_picture figcaption
+{
+    margin-top: 5px;
+    color: var(--quiet);
+    font-size: 0.68rem;
+    line-height: 1.25;
+}
+
+.logic_book_picture
+{
+    float: right;
+    width: 112px;
+    margin: 4px 0 13px 21px;
+    padding: 5px;
+    background: var(--soft);
+    border: 1px solid var(--line);
+    text-align: center;
+}
+
+.logic_book_picture img
+{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.logic_book_picture figcaption
+{
+    margin-top: 5px;
+    color: var(--quiet);
+    font-size: 0.68rem;
+    line-height: 1.25;
+}
+
+.prover_marks
+{
+    float: right;
+    display: grid;
+    width: 166px;
+    gap: 8px;
+    margin: 3px 0 14px 22px;
+    padding: 7px;
+    background: rgba(239, 244, 241, 0.58);
+    border: 1px solid var(--line);
+}
+
+.prover_marks a
+{
+    display: block;
+    padding: 4px;
+    background: rgba(246, 248, 246, 0.76);
+}
+
+.prover_marks img
+{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.milestone_marks
+{
+    display: flex;
+    clear: both;
+    gap: 12px;
+    margin: 18px 0 23px;
+}
+
+.milestone_marks a
+{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 135px;
+    padding: 5px 9px;
+    background: var(--soft);
+    border: 1px solid var(--line);
+    font-size: 0.76rem;
+}
+
+.milestone_marks img
+{
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+}
+
+.milestone_marks .fmcad_mark
+{
+    color: #e4edf5;
+    background: #315262;
+}
+
+.milestone_marks .fmcad_mark img
+{
+    width: 47px;
+}
+
+.work_opening
+{
+    display: grid;
+    grid-template-columns: 190px minmax(0, 1fr);
+    gap: 28px;
+    margin-bottom: 18px;
+}
+
+.work_opening figure
+{
+    margin: 2px 0 0;
+    border: 1px solid var(--line);
+}
+
+.work_opening > div
+{
+    align-self: center;
+}
+
+.work_opening img
+{
+    display: block;
+    width: 100%;
+    height: 105px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.project
+{
+    padding: 11px 0 12px;
+    border-top: 1px solid var(--line);
+}
+
+.project_list
+{
+    max-width: 570px;
+}
+
+.project h2
+{
+    margin-bottom: 4px;
+}
+
+.project_header
+{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 5px;
+}
+
+.project_header h2
+{
+    margin: 0;
+}
+
+.project_header span
+{
+    flex: 0 0 auto;
+    color: var(--quiet);
+    font-size: 0.74rem;
+    white-space: nowrap;
+}
+
+.work_points
+{
+    margin: 2px 0 10px;
+    padding-left: 20px;
+}
+
+.work_points li
+{
+    margin-bottom: 6px;
+}
+
+.project_links
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 17px;
+    margin-bottom: 0;
+    font-size: 0.76rem;
+}
+
+.pending_link
+{
+    color: var(--quiet);
+    font-style: italic;
+}
+
+.personal h2
+{
+    margin-top: 25px;
+}
+
+.reading_list
+{
+    columns: 2;
+    column-gap: 30px;
+    margin: 3px 0 19px;
+    padding-left: 20px;
+}
+
+.reading_list li
+{
+    break-inside: avoid;
+    margin-bottom: 6px;
+}
+
+.star_list
+{
+    margin: 3px 0 17px;
+}
+
+.star_list li
+{
+    display: grid;
+    grid-template-columns: 18px minmax(0, 1fr);
+    gap: 4px;
+    margin-bottom: 4px;
+}
+
+footer
+{
+    padding-top: 15px;
+    border-top: 1px solid var(--line);
+    color: var(--quiet);
+    font-size: 0.73rem;
+}
+
+footer p
+{
+    margin: 0;
+}
+
+@media (max-width: 720px)
+{
+    html
+    {
+        background-attachment: scroll;
+    }
+
+    .page
+    {
+        width: min(100% - 24px, 640px);
+        padding: 27px 25px 20px;
+    }
+
+    .site_header
+    {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    nav
+    {
+        justify-self: start;
+        white-space: normal;
+    }
+
+    .opening
+    {
+        grid-template-columns: minmax(0, 1fr) 145px;
+        gap: 23px;
+    }
+
+    .page_links
+    {
+        grid-template-columns: 1fr;
+        max-width: 280px;
+    }
+
+    .work_opening
+    {
+        grid-template-columns: 150px minmax(0, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px)
+{
+    .page
+    {
+        width: 100%;
+        padding: 24px 20px 18px;
+        border: 0;
+    }
+
+    .opening
+    {
+        display: block;
+    }
+
+    .opening_picture
+    {
+        width: min(100%, 240px);
+        margin-top: 21px;
+    }
+
+    .news_list div
+    {
+        grid-template-columns: 1fr;
+        gap: 2px;
+    }
+
+    .journey_picture
+    {
+        float: none;
+        width: min(100%, 310px);
+        margin: 0 0 18px;
+    }
+
+    .video_picture
+    {
+        float: none;
+        width: min(100%, 310px);
+        margin: 0 0 18px;
+    }
+
+    .notes_picture
+    {
+        float: none;
+        width: min(100%, 220px);
+        margin: 0 0 18px;
+    }
+
+    .book_picture
+    {
+        width: 100px;
+    }
+
+    .logic_book_picture
+    {
+        width: 100px;
+    }
+
+    .prover_marks
+    {
+        width: 145px;
+        margin-left: 16px;
+    }
+
+    .milestone_marks
+    {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .work_opening
+    {
+        display: block;
+    }
+
+    .work_opening figure
+    {
+        width: min(100%, 310px);
+        margin-top: 18px;
+    }
+
+    .project_header
+    {
+        display: block;
+    }
+
+    .project_header span
+    {
+        display: block;
+        margin-top: 2px;
+    }
+
+    .reading_list
+    {
+        columns: 1;
+    }
+}
