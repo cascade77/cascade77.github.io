@@ -22,6 +22,8 @@ html
     min-height: 100%;
     background-color: var(--ground);
     background-image: url("assets/paper-lake-waves.webp");
+    background-attachment: fixed;
+    background-position: 0 0;
     background-repeat: repeat;
 }
 
@@ -38,19 +40,42 @@ body
 
 .page
 {
+    position: relative;
     width: min(810px, calc(100% - 42px));
     min-height: 100vh;
     margin: 0 auto;
     padding: 31px 42px 22px;
     background: var(--paper);
-    border-right: 1px solid rgba(71, 91, 88, 0.34);
     border-left: 1px solid rgba(71, 91, 88, 0.34);
+}
+
+.page::after
+{
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 145px;
+    background-color: var(--ground);
+    background-image: url("assets/paper-lake-waves.webp");
+    background-attachment: fixed;
+    background-position: 0 0;
+    background-repeat: repeat;
+    content: "";
+}
+
+.page > *
+{
+    position: relative;
+    z-index: 1;
 }
 
 .site_header
 {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
+    max-width: 620px;
     gap: 28px;
     padding-bottom: 19px;
     border-bottom: 1px solid var(--line);
@@ -421,6 +446,7 @@ main a
     line-height: 1.25;
 }
 
+.quantum_book_picture,
 .logic_book_picture
 {
     float: right;
@@ -432,6 +458,7 @@ main a
     text-align: center;
 }
 
+.quantum_book_picture img,
 .logic_book_picture img
 {
     display: block;
@@ -439,6 +466,7 @@ main a
     height: auto;
 }
 
+.quantum_book_picture figcaption,
 .logic_book_picture figcaption
 {
     margin-top: 5px;
@@ -516,42 +544,32 @@ main a
     margin-bottom: 7px;
 }
 
-.project
+.work_sections
 {
-    padding: 11px 0 12px;
+    max-width: 590px;
+}
+
+.work_sections section
+{
+    padding: 11px 0 13px;
     border-top: 1px solid var(--line);
 }
 
-.project_list
+.work_sections section + section
 {
-    max-width: 570px;
+    margin-top: 0;
 }
 
-.project h2
+.work_sections h2
 {
-    margin-bottom: 4px;
+    margin: 0 0 2px;
 }
 
-.project_header
+.work_date
 {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 16px;
-    margin-bottom: 5px;
-}
-
-.project_header h2
-{
-    margin: 0;
-}
-
-.project_header span
-{
-    flex: 0 0 auto;
+    margin-bottom: 7px;
     color: var(--quiet);
     font-size: 0.74rem;
-    white-space: nowrap;
 }
 
 .work_points
@@ -565,24 +583,34 @@ main a
     margin-bottom: 6px;
 }
 
-.project_links
+.earlier_work,
+.writing_list
 {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px 17px;
-    margin-bottom: 0;
-    font-size: 0.76rem;
+    margin: 3px 0 0;
+    padding: 0;
+    list-style: none;
 }
 
-.project_links a
+.earlier_work li,
+.writing_list li
 {
-    font-weight: bold;
+    display: grid;
+    grid-template-columns: 88px minmax(0, 1fr);
+    gap: 15px;
+    margin-bottom: 8px;
 }
 
-.pending_link
+.earlier_work span,
+.writing_list span
 {
     color: var(--quiet);
-    font-style: italic;
+    font-size: 0.75rem;
+}
+
+.earlier_work p,
+.writing_list p
+{
+    margin: 0;
 }
 
 .personal h2
@@ -619,6 +647,7 @@ main a
 
 footer
 {
+    max-width: 620px;
     padding-top: 15px;
     border-top: 1px solid var(--line);
     color: var(--quiet);
@@ -641,6 +670,11 @@ footer p
     {
         width: min(100% - 24px, 640px);
         padding: 27px 25px 20px;
+    }
+
+    .page::after
+    {
+        display: none;
     }
 
     .site_header
@@ -667,11 +701,6 @@ footer p
         max-width: 280px;
     }
 
-    .work_opening
-    {
-        grid-template-columns: 210px minmax(0, 1fr);
-        gap: 20px;
-    }
 }
 
 @media (max-width: 480px)
@@ -729,6 +758,7 @@ footer p
         width: 100px;
     }
 
+    .quantum_book_picture,
     .logic_book_picture
     {
         width: 100px;
@@ -746,30 +776,16 @@ footer p
         flex-direction: column;
     }
 
-    .work_opening
-    {
-        display: block;
-    }
-
-    .work_opening figure
-    {
-        width: min(100%, 310px);
-        margin-top: 18px;
-    }
-
-    .project_header
-    {
-        display: block;
-    }
-
-    .project_header span
-    {
-        display: block;
-        margin-top: 2px;
-    }
-
     .reading_list
     {
         columns: 1;
+    }
+
+    .earlier_work li,
+    .writing_list li
+    {
+        grid-template-columns: 1fr;
+        gap: 1px;
+        margin-bottom: 11px;
     }
 }
