@@ -572,6 +572,15 @@ main a
     font-size: 0.74rem;
 }
 
+.work_affiliation
+{
+    margin: 0 0 1px;
+    color: var(--quiet);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
 .work_points
 {
     margin: 2px 0 10px;
