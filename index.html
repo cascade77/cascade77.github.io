@@ -15,123 +15,88 @@
             </div>
 
             <nav aria-label="Main navigation">
-                <a class="current" href="index.html">Profile</a>
-                <a href="news.html">Notes</a>
+                <a class="current" href="index.html" aria-current="page">Home</a>
+                <a href="news.html">News</a>
+                <a href="writing.html">Writing</a>
             </nav>
         </header>
 
         <main>
             <section class="opening">
-                <div>
-                    <h1>Brief</h1>
+                <p class="introduction">
+                    I am a rising final-year undergraduate studying bioinformatics at
+                    <a href="https://nust.edu.pk/">NUST</a>. My interests are in formal verification,
+                    particularly interactive theorem proving and its application to systems
+                    software. I work mainly with the
+                    <a href="https://rocq-prover.org/">Rocq theorem prover</a>, using it for
+                    C verification of kernel code and for reasoning about programming-language
+                    semantics.
+                </p>
+
+                <p class="contact_line">
+                    Here is my <a href="files/arooj-fatima-cv.pdf">CV</a>. Feel free to
+                    <a href="mailto:afatima.bsbi23sines@student.nust.edu.pk">email me</a>.
+                </p>
+            </section>
+
+            <section id="work">
+                <h1>Research and work</h1>
+
+                <div class="work_entry">
+                    <div class="work_label">
+                        <h2><a href="https://formal.land/">Formal Land</a></h2>
+                        <p>Formal Verification Engineer Intern<br>June 1, 2026–present</p>
+                    </div>
 
                     <p>
-                        I am a rising final-year undergraduate at
-                        <a href="https://nust.edu.pk/">NUST</a>, where I study bioinformatics.
-                        I am mostly interested in the formal verification of systems software
-                        and programming languages. Most of my proof work is in Rocq.
-                    </p>
-
-                    <p>
-                        Alongside my degree, I am a Formal Verification Engineer Intern at
-                        <a href="https://formal.land/">Formal Land</a>.
+                        I help maintain the Rocq translation of REVM in
+                        <a href="https://github.com/formal-land/coq-of-rust">rocq-of-rust</a>
+                        and work on correspondence proofs between REVM and go-ethereum.
                     </p>
                 </div>
 
-                <div class="contact_links" aria-label="Contact and profiles">
-                    <a href="mailto:afatima.bsbi23sines@student.nust.edu.pk">Email</a>
-                    <a href="https://github.com/cascade77">GitHub</a>
-                    <a href="https://codeberg.org/cascade">Codeberg</a>
-                    <a href="https://www.linkedin.com/in/arooj-dot-exe/">LinkedIn</a>
-                </div>
-            </section>
+                <div class="work_entry">
+                    <div class="work_label">
+                        <h2 class="long_label">System Analysis and<br>Verification Lab (SAVe)</h2>
+                        <p>Student Researcher<br>June 2025–present</p>
+                    </div>
 
-            <section class="work_heading" id="work">
-                <h1>Work</h1>
-            </section>
-
-            <div class="work_sections">
-                <section id="formal-land">
-                    <h2><strong>Formal Verification Engineer Intern</strong></h2>
-                    <p class="work_affiliation"><a href="https://formal.land/">Formal Land</a>, Paris, France / Remote</p>
-                    <p class="work_date">June 2026–present</p>
                     <p>
-                        In the public
-                        <a href="https://github.com/formal-land/coq-of-rust"><strong>rocq-of-rust</strong></a>
-                        project, I help keep the Rocq translation of REVM in step with the Rust
-                        crate. My other work concerns instruction-level proofs relating REVM and
-                        go-ethereum; that repository is private.
-                    </p>
-                </section>
-
-                <section id="university-research">
-                    <h2><strong>Student Researcher</strong></h2>
-                    <p class="work_affiliation">Systems Analysis and Verification Lab, NUST</p>
-                    <p class="work_date">June 2025–present</p>
-                    <p>
-                        I work with my teammate under
+                        I am advised by
                         <a href="https://scholar.google.com/citations?user=fmgsqYkAAAAJ&hl=en">Dr. Adnan Rashid</a>.
-                        Our final-year project studies parts of the µC/OS-III kernel using Rocq,
-                        VST, and CompCert's C semantics.
+                        My final-year project concerns parts of the µC/OS-III kernel, using
+                        Rocq, VST, and CompCert's C semantics. The public development covers its
+                        <a href="https://codeberg.org/cascade/ucos3-vst">ready-priority bitmap</a>.
                     </p>
-                    <ul class="work_points">
-                        <li>
-                            <a href="https://codeberg.org/unnoun/fyp-tp-playground"><strong>Early theorem-prover exploration.</strong></a>
-                            This is the shared playground where we began with Lean and made our
-                            first theorem-proving experiments before moving towards Rocq and the
-                            present project.
-                        </li>
-                        <li>
-                            <a href="https://codeberg.org/cascade/ucos3-vst"><strong>Ready-priority bitmap verification.</strong></a>
-                            We verified four C functions operating on the configured 32-bit bitmap.
-                        </li>
-                        <li>
-                            <a href="https://codeberg.org/cascade/sched-fv"><strong>CPU schedulers.</strong></a>
-                            Along the way, we developed Rocq models and machine-checked proofs for
-                            FIFO, SJF, Lottery, MLFQ, Stride, and CFS, including a red-black-tree-based
-                            CFS variant. We identified reusable minimum-key, layered-priority, and
-                            ticket-interval proof patterns.
-                        </li>
-                    </ul>
-                </section>
+                </div>
+            </section>
 
-                <section id="open-source">
-                    <h2><strong>Open-source work</strong></h2>
-                    <p>
-                        I have contributed proofs, documentation, and tests to
-                        <a href="https://github.com/mit-plv/coqutil/pulls?q=is%3Apr+author%3Acascade77"><strong>coqutil</strong></a>
-                        and
-                        <a href="https://github.com/rocq-community/parseque/pulls?q=is%3Apr+author%3Acascade77"><strong>Parseque</strong></a>.
-                    </p>
-                </section>
+            <section id="other-work">
+                <h1>Elsewhere</h1>
 
-                <section id="earlier-work">
-                    <h2><strong>Earlier work</strong></h2>
-                    <ul class="earlier_work">
-                        <li>
-                            <span>2025–present</span>
-                            <p><a href="https://github.com/cascade77/formal-verification-algorithms"><strong>Formalized algorithms</strong></a>: small Rocq and Lean developments on trees, sorting, block decomposition, and schedulers.</p>
-                        </li>
-                        <li>
-                            <span>2026</span>
-                            <p><a href="https://github.com/cascade77/proof-star-convergence"><strong>Proof-star convergence</strong></a>: a PySpark protein-network pipeline with a Rocq proof of the connected-components algorithm at fixpoint.</p>
-                        </li>
-                        <li>
-                            <span>2025</span>
-                            <p><a href="https://github.com/cascade77/ncai-dll-internship-summer25"><strong>Summer Research Intern</strong></a>, Deep Learning Laboratory, NCAI, NUST: experiments with active learning for medical images.</p>
-                        </li>
-                        <li>
-                            <span>2025</span>
-                            <p><a href="https://github.com/cascade77/concurrent-webserver-rtos"><strong>Concurrent web server on FreeRTOS</strong></a> and <a href="https://github.com/cascade77/parallel-matrix-sorting"><strong>parallel-programming experiments</strong></a> from systems courses.</p>
-                        </li>
-                    </ul>
-                </section>
-            </div>
+                <p>
+                    Other public work includes
+                    <a href="https://codeberg.org/cascade/sched-fv">Rocq models and proofs of general-purpose CPU schedulers</a>,
+                    small Rocq and Lean
+                    <a href="https://github.com/cascade77/formal-verification-algorithms">formalizations of algorithms</a>,
+                    a <a href="https://github.com/cascade77/proof-star-convergence">connected-components proof</a>,
+                    and contributions to
+                    <a href="https://github.com/mit-plv/coqutil/pulls?q=is%3Apr+author%3Acascade77">coqutil</a>
+                    and
+                    <a href="https://github.com/rocq-community/parseque/pulls?q=is%3Apr+author%3Acascade77">Parseque</a>.
+                </p>
+
+                <p>
+                    In summer 2025, I was a Summer Research Intern at the
+                    Deep Learning Laboratory, National Center of Artificial Intelligence (NCAI),
+                    where I worked on active learning for medical images.
+                </p>
+            </section>
+
         </main>
 
         <footer>
             <p>Last updated August 2026.</p>
-            <p>Third-party images belong to their respective copyright holders.</p>
         </footer>
     </div>
 </body>
