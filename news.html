@@ -16,7 +16,7 @@
 
             <nav aria-label="Main navigation">
                 <a href="index.html">Home</a>
-                <a class="current" href="news.html" aria-current="page">News</a>
+                <a class="current" href="news.html" aria-current="page">News <span class="nav_new" aria-hidden="true">new</span></a>
                 <a href="writing.html">Writing</a>
             </nav>
         </header>
@@ -26,11 +26,23 @@
                 <h1>News</h1>
 
                 <dl class="news_list">
+                <div class="latest_news">
+                    <dt><time datetime="2026-09-01">September 1, 2026</time></dt>
+                    <dd>
+                        Our paper, <cite>A Comparative Formal Verification Framework for
+                        General-Purpose CPU Scheduling in Rocq</cite>, by
+                        <span class="paper_authors">Arooj Fatima, Saad Saghir, and Adnan Rashid</span>, has been accepted for publication at the
+                        <a href="https://conference.seecs.edu.pk/icodt2-2026/">6th IEEE International Conference on Digital Futures and Transformative Technologies (ICoDT2 2026)</a>.
+                    </dd>
+                </div>
+
                 <div>
                     <dt><time datetime="2026-07-22">July 22, 2026</time></dt>
                     <dd>
-                        Our report on verifying µC/OS-III priority management has been accepted for
-                        presentation at the
+                        Our report, <cite>Towards Machine-Checked Verification of the μC/OS-III
+                        Kernel Using Rocq and the Verified Software Toolchain</cite>, by
+                        <span class="paper_authors">Arooj Fatima and Saad Saghir</span>, has been accepted
+                        for presentation at the
                         <a href="https://fmcad.org/FMCAD26/student_forum/">FMCAD 2026 Student Forum</a>.
                         <a class="event_mark fmcad_mark" href="https://fmcad.org/FMCAD26/student_forum/" aria-label="FMCAD 2026 Student Forum">
                             <img src="assets/fmcad-logo.svg" alt="FMCAD">
@@ -62,7 +74,7 @@
         </main>
 
         <footer>
-            <p>Last updated August 2026.</p>
+            <p>Last updated September 2026.</p>
             <p>Third-party images belong to their respective copyright holders.</p>
         </footer>
     </div>
