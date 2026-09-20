@@ -475,6 +475,36 @@ main a
     font-size: 0.78rem;
 }
 
+.visual_note
+{
+    margin: 0;
+}
+
+.visual_note img
+{
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--line);
+}
+
+.visual_note figcaption
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 6px;
+    color: var(--quiet);
+    font-size: 0.7rem;
+}
+
+.visual_note_text
+{
+    margin-top: 18px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1rem;
+}
+
 .video_picture
 {
     float: right;
